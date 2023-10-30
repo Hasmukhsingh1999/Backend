@@ -7,7 +7,7 @@ const logger = require("morgan");
 const router = require("./routes/index");
 require('./models/db').connectDataBase()
 
-app.use(cors());
+app.use(cors({origin:"https://backend-blond-mu.vercel.app",credentials:true}));
 app.use(logger("tiny"));
 app.use(bodyParser.json());
 
